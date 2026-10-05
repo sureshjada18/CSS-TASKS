@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+           /* grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-template-rows:repeat(10,1fr);*/
+            grid-template-areas:"A A A A"
+            "B C C D"
+            "B C C D"
+            "B C C D"
+            "E E E E";
+            grid-template-rows:20% 20% 20% 20% 20%;
+           height:100vh; 
+           border:2px solid bisque;
+        }
+        .box{
+            display:flex;
+            justify-content: center;
+              align-items:center;
+              font-size:25px;
+              font-weight:900;
+              color:bisque;
+              border:2px solid bisque;
+        }
+        .header{
+            background:rgb(133, 63, 51);
+            grid-area:A;
+    
+        }
+        .left-side{
+            background:rgb(97, 107, 59);
+            grid-area:B;
+        }
+        .main{
+            background:rgb(55, 108, 106);
+            grid-area:C;
+        }
+        .right-side{
+            background:rgb(139, 65, 84);
+            grid-area:D;
+        }
+        .footer{
+            background:rgb(105, 54, 110);
+            grid-area:E;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="box header">Header</div>
+          <div class="box left-side">Left Side Bar</div>
+           <div class="box main">Main Content</div>
+        <div class="box right-side">Right Side Bar</div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           display:flex;
+           background:url("assets/garden1.jpg") center/cover no-repeat fixed;
+           margin:0;
+           justify-content:center;
+           text-align: center;
+        }
+        .invite-card{
+            width:40%;
+            height:1400px;
+            border:4px solid rgb(81, 140, 81);
+            border-radius:20px;
+            background:linear-gradient(rgb(203, 244, 192) 0%,rgb(186, 241, 170) 60%,rgb(185, 222, 175)100%);
+            
+        }
+        .eyebrow{
+            color:rgb(5, 67, 5);
+            font-family:'Courier New', Courier, monospace;
+        }
+       .title{
+            font-family: "Monotype Corsiva", cursive;
+            color:rgb(66, 113, 15)
+        }
+        .hero-photo{
+            height:250px;
+            width:80%;
+            background:white url("assets/hall1.jpg");
+            margin:0 auto;  
+        }
+        .block{
+    margin:22px 20px 0;
+    background:linear-gradient(180deg, rgb(140, 240, 87), #e2edc0);
+    border-radius:16px;
+    padding:22px 18px 20px;
+  }
+ .block-title{
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    color:var(--olive-dark);
+    font-size:22px;
+    margin:0 0 18px;
+  }
+
+  .info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .info-card{
+
+    border-radius:10px;
+    padding:14px 10px;
+    text-align:center;
+    background:white
+  }
+  
+
+  .sched-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .sched-card{
+
+    border-radius:10px;
+    padding:14px 10px;
+    text-align:center;
+    background:white
+  }
+  .gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:22px 20px 0;
+  }
+  #g3{ grid-column:1 / -1; width:48%; margin:0 auto; }
+  .g-photo{
+    border-radius:10px;
+    border:2px solid green;
+    height:120px;
+    position:relative;
+  }
+  #g1{background-image:url("assets/schedule1.jpg");
+   background-size:cover; background-position:center; background-repeat:no-repeat; }
+  #g2{background-image:url("assets/wedding.jpg");
+   background-size:cover; background-position:center; background-repeat:no-repeat;  }
+  #g3{ background-image:url("assets/garden1.jpg");
+   background-size:cover; background-position:center; background-repeat:no-repeat; }
+
+  /* ---- Quote ---- */
+  .quote-wrap{
+    margin:26px 26px 0;
+    padding-left:16px;
+    border-left:3px solid var(--olive);
+  }
+  .quote-wrap p{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:19px;
+    color:var(--olive-dark);
+    margin:0;
+  }
+
+  /* ---- RSVP ---- */
+  .rsvp-wrap{
+    text-align:center;
+    padding:26px 20px 28px;
+  }
+  .rsvp-btn{
+    display:inline-block;
+    background:linear-gradient(135deg, var(--olive), var(--olive-dark));
+    color:#fdfcef;
+    border:none;
+    border-radius:30px;
+    padding:14px 38px;
+    font-family:'Cormorant Garamond', serif;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    font-size:14px;}
+    </style>
+</head>
+<body>
+    <div class="invite-card">
+
+  <div class="header">
+    <p class="eyebrow">✨You're Invited✨</p>
+    <h1 class="title">Garden Evening Celebration</h1>
+    <p class="subtitle">Join us for an elegant evening filled with joy, music, delicious cuisine and beautiful memories.</p>
+  </div>
+
+  <div class="hero-photo">
+    <div class="glow"></div>
+
+  </div>
+
+  <div class="block">
+    <h2 class="block-title">Event Details</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="ic-label">Date</div>
+        <div class="ic-value">18 July 2026</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">Time</div>
+        <div class="ic-value">6:30 PM</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">Venue</div>
+        <div class="ic-value">Olive Garden Hall</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-label">Theme</div>
+        <div class="ic-value">Olive &amp; Floral</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2 class="block-title">Schedule</h2>
+    <div class="sched-grid">
+      <div class="sched-card">
+        <div class="sched-time">6:00 PM</div>
+        <div class="sched-what">Welcome</div>
+      </div>
+      <div class="sched-card">
+        <div class="sched-time">7:00 PM</div>
+        <div class="sched-what">Live Music</div>
+      </div>
+      <div class="sched-card">
+        <div class="sched-time">8:00 PM</div>
+        <div class="sched-what">Dinner</div>
+      </div>
+      <div class="sched-card">
+        <div class="sched-time">9:30 PM</div>
+        <div class="sched-what">Celebration</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="g-photo" id="g1"></div>
+    <div class="g-photo" id="g2"></div>
+    <div class="g-photo" id="g3"></div>
+  </div>
+
+  <div class="quote-wrap">
+    <p>"Together is a wonderful place to be."</p>
+  </div>
+
+  <div class="rsvp-wrap">
+    <button class="rsvp-btn">RSVP Now</button>
+  </div>
+
+  <footer>Hosted with Love • The Green Meadows Family</footer>
+
+</div>
+
+</body>
+</html>

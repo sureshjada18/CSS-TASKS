@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #1b254f 0%, #1b2b5e 40%, #10182f 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 32px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.search {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #131b33;
+  color: #fff;
+  font-size: 15px;
+}
+
+.search::placeholder {
+  color: #8b93ad;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.bell {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+
+.layout {
+  display: flex;
+  gap: 24px;
+  padding: 24px 32px;
+}
+
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #131b33;
+  border-radius: 16px;
+  padding: 24px;
+  height: fit-content;
+}
+
+.menu-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  background: #1c2646;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  background: #29365f;
+}
+
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 24px;
+  grid-template-areas:
+    "hero weather"
+    "hero progress"
+    "quote gallery"
+    "bottom bottom";
+}
+
+.card {
+  background: #131b33;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+
+.hero {
+  grid-area: hero;
+  background: linear-gradient(135deg, #151f46, #4527a0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.hero h1 {
+  font-size: 44px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #e3e6f5;
+}
+
+.explore-btn {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #131b33;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.weather { grid-area: weather; }
+.progress { grid-area: progress; }
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.big-text {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.card ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.card ul li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+
+.quote {
+  grid-area: quote;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+.quote-text {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+.gallery {
+  grid-area: gallery;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.bottom-row {
+  grid-area: bottom;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.now-playing .controls {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+.now-playing .controls span {
+  background: #1c2646;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.profile h3 {
+  font-size: 20px;
+}
+
+.profile p {
+  color: #b7bdd6;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  background: #0c1226;
+  color: #b7bdd6;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "weather""progress"
+      "quote"
+      "gallery"
+      "bottom";
+  }
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
